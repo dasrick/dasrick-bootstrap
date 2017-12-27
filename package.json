@@ -1,0 +1,48 @@
+{
+  "name": "dasrick-bootstrap",
+  "version": "0.0.0",
+  "description": "A customized version of bootstrap for projects of FTI Group",
+  "license": "MIT",
+  "author": "Enrico Hoffmann <dasrick@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dasrick/dasrick-bootstrap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dasrick/dasrick-bootstrap/issues"
+  },
+  "homepage": "https://github.com/dasrick/dasrick-bootstrap#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "clean-css-cli": "^4.1.10",
+    "cpx": "^1.5.0",
+    "node-sass": "^4.6.1",
+    "npm-run-all": "^4.1.2",
+    "postcss-cli": "^4.1.1",
+    "postcss-sass": "^0.2.0",
+    "stylelint": "^8.3.1",
+    "stylelint-config-recommended-scss": "^3.0.0",
+    "stylelint-config-standard": "^18.0.0",
+    "stylelint-order": "^0.8.0",
+    "stylelint-scss": "^2.1.0"
+  },
+  "peerDependencies": {
+    "bootstrap": "^4.0.0-beta.2"
+  },
+  "scripts": {
+    "css": "npm-run-all --parallel css-lint* css-compile* --sequential css-prefix* css-minify*",
+    "css-main": "npm-run-all --parallel css-lint css-compile --sequential css-prefix css-minify",
+    "css-compile": "node-sass --include-path node_modules/bootstrap/scss --output-style expanded --source-map true --source-map-contents true --precision 6 scss/bootstrap.scss dist/css/bootstrap.css && node-sass --include-path node_modules/bootstrap/scss --output-style expanded --source-map true --source-map-contents true --precision 6 scss/bootstrap-grid.scss dist/css/bootstrap-grid.css && node-sass --include-path node_modules/bootstrap/scss --output-style expanded --source-map true --source-map-contents true --precision 6 scss/bootstrap-reboot.scss dist/css/bootstrap-reboot.css",
+    "css-lint": "stylelint --config build/.stylelintrc --syntax scss \"scss/**/*.scss\"",
+    "css-prefix": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\"",
+    "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output dist/css/bootstrap.min.css dist/css/bootstrap.css && cleancss --level 1 --source-map --source-map-inline-sources --output dist/css/bootstrap-grid.min.css dist/css/bootstrap-grid.css && cleancss --level 1 --source-map --source-map-inline-sources --output dist/css/bootstrap-reboot.min.css dist/css/bootstrap-reboot.css",
+    "js": "cpx 'node_modules/bootstrap/dist/js/*' dist/js",
+    "dist": "npm-run-all --parallel css js",
+    "postversion": "git push && git push --tags",
+    "test": "npm-run-all dist"
+  }
+}

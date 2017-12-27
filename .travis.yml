@@ -1,0 +1,25 @@
+sudo: false
+dist: trusty
+language: node_js
+node_js:
+- "8"
+
+cache:
+  yarn: true
+  directories:
+     - ./node_modules
+
+script:
+  - echo "build customized version of bootstrap ..."
+  - npm run dist
+
+#deploy:
+#  - provider: npm
+#    skip_cleanup: true
+#    email: $NPM_EMAIL
+#    api_key:
+#      secure: L0sidZt/EJXyvkdgvvEWefE+B4YUZ3Opr4csU+iHN7c/N7pAd3XHvuK+DJQwzabTZdpSXTJXglcWjn6jvm69tbe7iz7VkyWLjTpeEd+i5CGP1EndYNN+3WH888r3RM1mShQsn2sJJ77uoFllME3ED72GcfLq/zDvATUWlYFeyshmGPryTxIWkEqK86uItYAUxMTAZNOATrBAQ5jIqkupe+j1iAUlCYx91IAz+OExRmYOOWv5oFvPRa09lDWunW+ACyZuxCipjqo7o9SQjW3NPqBKvcSmMJHnLmjZdV2djZ0KVkgfXZeIag28kDxIk3XI/FpYPxZ6QP7CThTqwzzDPHcNQLsW4vwy6s+0SRsSKsOS7RmLiVGjqm9IxRDbaEFiCR0kkuPS+DwYGhWCCzoovXmZnbg7U/fCTrBvukYjmb07IC2dY37Bfj2+JwdSnDs3gM79JnA71pbqvL6w/5lMbkN+0sKhfttBtbW+OVilzgAJphRLdG/XbRw6CDfNLsRkvhLjB6f18wqLW0ih7wDZ3MzDBIYcYPzIlUWl1JLjlcKpV9BpJqz5uOlf7yB5x+CbwBilK9I071c3RfVbjskzDqlnuiHLUuc7HIbVMV2RgB1biiuyDxOIF4dHbgiUaErqHM/LwJElraGQ6Y4Krfd4T6iGhekbKAVcupYLGeVEjWY=
+#    on:
+#      node: "8"
+#      tags: true
+#      repo: dasrick/dasrick-bootstrap
