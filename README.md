@@ -9,6 +9,8 @@
 
 > A customized version of bootstrap 4 for projects of dasrick.de
 
+... currently used version of bootstrap: 4.0.0-beta.2
+
 ## Usage
 
 There are different ways to use this package ...
