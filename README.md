@@ -38,7 +38,7 @@ You can put the following snippet into the head of your HTML document ...
 
 
 ```sh
-<link rel="stylesheet" href="...">
+<link rel="stylesheet" href="https://rawgit.com/dasrick/dasrick-bootstrap/master/dist/css/bootstrap.min.css">
 ```
 
 
