@@ -224,7 +224,7 @@ $transition-collapse:         height .35s ease !default;
 
 // stylelint-disable value-keyword-case
 $font-family-sans-serif:      "Segoe UI", Roboto, "Open Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-family-sans-serif-comp: "Segoe UI", Roboto, "Open Sans Compressed", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif-comp: "Segoe UI", Roboto, "Open Sans Condensed", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-family-monospace:       "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
@@ -249,7 +249,7 @@ $h6-font-size:                $font-size-base !default;
 
 $headings-margin-bottom:      ($spacer / 2) !default;
 $headings-font-family:        $font-family-sans-serif-comp !default;
-$headings-font-weight:        500 !default;
+$headings-font-weight:        $font-weight-bold !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              inherit !default;
 
