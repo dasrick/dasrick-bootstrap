@@ -17,7 +17,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "bootstrap": "^4.0.0-beta.2",
+    "bootstrap": "^4.0.0-beta.3",
     "clean-css-cli": "^4.1.10",
     "cpx": "^1.5.0",
     "node-sass": "^4.6.1",

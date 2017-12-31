@@ -43,7 +43,7 @@ body {
 }
 
 [tabindex="-1"]:focus {
-  outline: none !important;
+  outline: 0 !important;
 }
 
 hr {
@@ -335,6 +335,7 @@ output {
 
 summary {
   display: list-item;
+  cursor: pointer;
 }
 
 template {
