@@ -1,7 +1,7 @@
 {
   "name": "dasrick-bootstrap",
   "version": "0.3.1",
-  "description": "A customized version of bootstrap for projects of FTI Group",
+  "description": "A customized version of bootstrap for projects of dasrick.de",
   "license": "MIT",
   "author": "Enrico Hoffmann <dasrick@gmail.com>",
   "repository": {
@@ -17,7 +17,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "bootstrap": "^4.0.0-beta.3",
+    "bootstrap": "^4.0.0",
     "clean-css-cli": "^4.1.10",
     "cpx": "^1.5.0",
     "node-sass": "^4.6.1",
@@ -29,9 +29,6 @@
     "stylelint-config-standard": "^18.0.0",
     "stylelint-order": "^0.8.0",
     "stylelint-scss": "^2.1.0"
-  },
-  "peerDependencies": {
-    "bootstrap": "^4.0.0-beta.2"
   },
   "scripts": {
     "css": "npm-run-all --parallel css-lint* css-compile* --sequential css-prefix* css-minify*",
