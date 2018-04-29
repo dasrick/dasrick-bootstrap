@@ -1,8 +1,6 @@
-/*
- * include only the minimum to be able to work with in other third party project
- */
-
-@import "functions";
-@import "variables";
 @import "dasrick_variables";
-@import "mixins";
+
+// Required
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
