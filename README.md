@@ -9,7 +9,7 @@
 
 > A customized version of bootstrap 4 for projects of dasrick.de
 
-... currently used version of bootstrap: 4.0.0
+... currently used version of bootstrap: 4.1.1
 
 ## Usage
 
